@@ -2,13 +2,16 @@ var girl = document.getElementById('girl');
 var leaf = document.getElementById('leaf');
 var title = document.getElementById('title');
 
+var winWidth = accDiv(getWidth(), 16) + '.';
+winWidth = winWidth.split('.')[0];
+
 var interval;
 var interval2;
 var status = 'after';
 
-var g_style = 0;
-var l_style = 0;
-var t_style = 0;
+var g_style = accMul(winWidth, 0.8);
+var l_style = winWidth;
+var t_style = accMul(winWidth, 1);
 
 var g_index = accDiv(8, 50);
 var l_index = accDiv(5, 50);
@@ -19,9 +22,6 @@ var o_index = accDiv(1, 50);
 var o_style = 0;
 
 var after = document.getElementById('to_after');
-
-var winWidth = accDiv(getWidth(), 16) + '.';
-winWidth = winWidth.split('.')[0];
 
 function to_after() {
 
@@ -39,9 +39,9 @@ function to_after() {
         
         if (num <= 50) {
             
-            g_style = accSub(winWidth, accMul(g_index, num));
+            g_style = accSub(g_style, g_index);
             l_style = accMul(l_index, num);
-            t_style = accSub(winWidth, accMul(t_index, num));
+            t_style = accSub(t_style, t_index);
 
             girl.style.width = g_style + 'rem';
             leaf.style.bottom = '-' + l_style + 'rem';
