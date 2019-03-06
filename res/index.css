@@ -61,6 +61,7 @@ html,body{
     font-family: 幼圆;
     position: fixed;
     top: 12rem;
+    left: 1.5rem;
     width: 100%;
     opacity: 0;
 }
