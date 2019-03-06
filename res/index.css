@@ -60,7 +60,7 @@ html,body{
     z-index: 1000;
     font-family: 幼圆;
     position: fixed;
-    top: 15rem;
+    top: 12rem;
     width: 100%;
     opacity: 0;
 }
